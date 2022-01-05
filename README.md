@@ -1,6 +1,9 @@
 # macOS-config
 Scripts to rebuild my mac
 
+
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/garjones/gareth.com/master/xxx.sh)"
+
 ---
 
 ### Notes:  
