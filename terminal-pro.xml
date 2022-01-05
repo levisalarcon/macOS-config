@@ -24,7 +24,7 @@
 	<data>
 	YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0b3BYJG9iamVjdHMS
 	AAGGoF8QD05TS2V5ZWRBcmNoaXZlctEICVRyb290gAGkCwwVFlUkbnVsbNQNDg8QERIT
-	FFZOU1NpemVYTlNmRmxhZ3NWTlNOYW1lViRjbGFzcyNAJAAAAAAAABAQgAKAA1ZNb25h
+	FFZOU1NpemVYTlNmRmxhZ3NWTlNOYW1lViRjbGFzcyNAJgAAAAAAABAQgAKAA1ZNb25h
 	Y2/SFxgZGlokY2xhc3NuYW1lWCRjbGFzc2VzVk5TRm9udKIZG1hOU09iamVjdAgRGiQp
 	MjdJTFFTWF5nbnd+hY6QkpSboKu0u74AAAAAAAABAQAAAAAAAAAcAAAAAAAAAAAAAAAA
 	AAAAxw==
@@ -61,8 +61,12 @@
 	YXNzbmFtZVgkY2xhc3Nlc1dOU0NvbG9yohYYWE5TT2JqZWN0CBEaJCkyN0lMUVNXXWRs
 	eYCMjpCVoKmxtAAAAAAAAAEBAAAAAAAAABkAAAAAAAAAAAAAAAAAAAC9
 	</data>
+	<key>columnCount</key>
+	<integer>160</integer>
 	<key>name</key>
 	<string>Pro</string>
+	<key>rowCount</key>
+	<integer>75</integer>
 	<key>shellExitAction</key>
 	<integer>2</integer>
 	<key>type</key>
