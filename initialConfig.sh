@@ -10,10 +10,14 @@ sudo -v
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 # fix zsh history
-echo 'HISTSIZE=99999'            >> ~/.zshrc
-echo 'HISTFILESIZE=999999'       >> ~/.zshrc
-echo 'SAVEHIST=$HISTSIZE'        >> ~/.zshrc
-echo 'alias history="history 1"' >> ~/.zshrc
+echo 'HISTSIZE=99999'              >> ~/.zshrc
+echo 'HISTFILESIZE=999999'         >> ~/.zshrc
+echo 'SAVEHIST=$HISTSIZE'          >> ~/.zshrc
+echo 'alias history="history 1"'   >> ~/.zshrc
+
+# enable alt-left & alt-right to go back and forth a word at a time
+echo 'bindkey "^[b" backward-word' >> ~/.zshrc
+echo 'bindkey "^[f" forward-word'  >> ~/.zshrc
 
 # set hostname
 echo "Setting hostname"
@@ -99,6 +103,7 @@ brew install --cask sf-symbols
 # install homebrew casks - utilities
 brew install --cask 1password
 brew install --cask aerial
+brew install --cask elgato-stream-deck
 brew install --cask sonos
 brew install --cask logitech-camera-settings
 brew install --cask vlc
@@ -147,6 +152,10 @@ defaults write com.apple.finder NewWindowTarget PfHm
 defaults write com.apple.finder NewWindowTargetPath 'file:///Users/garjones'
 killall Finder
 echo
+
+# set terminal preferences
+defaults write com.apple.Terminal "Startup Window Settings" -string "Pro"
+defaults write com.apple.Terminal "Default Window Settings" -string "Pro"
 
 # kill the terminal otherwise it will overwrite changes
 read -p "Installation complete. About to kill the terminal ... "
