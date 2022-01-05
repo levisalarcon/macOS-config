@@ -154,8 +154,14 @@ killall Finder
 echo
 
 # set terminal preferences
-defaults write com.apple.Terminal "Startup Window Settings" -string "Pro"
+# to create a terminal theme in xml format
+# plutil -extract Window\ Settings.ProBig xml1 -o - ~/Library/Preferences/com.apple.Terminal.plist > terminal-pro.xml
+
+terminalpro=$(<terminal-pro.xml)
+plutil -replace Window\ Settings.Pro -xml "$terminalpro" ~/Library/Preferences/com.apple.Terminal.plist
+
 defaults write com.apple.Terminal "Default Window Settings" -string "Pro"
+defaults write com.apple.Terminal "Startup Window Settings" -string "Pro"
 
 # kill the terminal otherwise it will overwrite changes
 read -p "Installation complete. About to kill the terminal ... "
