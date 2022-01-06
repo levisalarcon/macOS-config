@@ -118,6 +118,10 @@ ln -s ~/Library/Mobile\ Documents/com~apple~CloudDocs/dev/ssh ~/.ssh
 ln -s ~/Library/Mobile\ Documents/com~apple~CloudDocs/install ~/install
 ln -s ~/Library/Mobile\ Documents/com~apple~CloudDocs/Pictures.Files ~/Pictures/Files
 ln -s ~/Library/Mobile\ Documents/com~apple~CloudDocs/Movies.Files ~/Movies/Files
+
+# add microsoft teams custom backgrounds folder
+rm -rf ~/Library/Application\ Support/Microsoft/Teams/Backgrounds/Uploads
+ln -s ~/Library/Mobile\ Documents/com~apple~CloudDocs/Pictures.Files/teams ~/Library/Application\ Support/Microsoft/Teams/Backgrounds/Uploads
 echo
 
 # set dock preferences - size, delete default entries, add entries we want restart dock
