@@ -74,7 +74,7 @@ mas install 497799835       #Xcode                 (13.2.1)
 
 # add homebrew cask taps
 brew tap homebrew/cask-versions
-brew tap homebrew-cask-drivers
+brew tap homebrew/cask-drivers
 
 # install homebrew casks - microsoft applications
 brew install --cask intune-company-portal
