@@ -141,6 +141,7 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 brew tap homebrew/cask-fonts
 brew install svn
 brew install $( brew search powerline | grep font | tr '\n' ' ' )
+brew install --cask font-hack-nerd-font
 
 # install powerlevel10k
 brew install romkatv/powerlevel10k/powerlevel10k
