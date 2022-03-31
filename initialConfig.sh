@@ -134,6 +134,22 @@ brew install --cask slack
 brew install --cask soundsource
 #brew install --cask synergy
 
+# install oh-my-zsh
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+# install powerline fonts
+brew tap homebrew/cask-fonts
+brew install svn
+brew install $( brew search powerline | grep font | tr '\n' ' ' )
+
+# install powerlevel10k
+brew install romkatv/powerlevel10k/powerlevel10k
+echo "source $(brew --prefix)/opt/powerlevel10k/powerlevel10k.zsh-theme" >>~/.zshrc
+
+# install omz plugins
+brew install zsh-syntax-highlighting
+brew install zsh-history-substring-search
+
 # create symbolic links for iCloud folders
 echo "Creating symbolic links for iCloud"
 ln -s ~/Library/Mobile\ Documents/com~apple~CloudDocs/dev ~/dev
