@@ -63,6 +63,9 @@ git mergetool -y
 # install keyboard driver (personal to gareth)
 brew install 1kc-razer
 
+# install azure cli
+brew install azure-cli
+
 # install mac app store command-line interface
 brew install mas
 
@@ -105,7 +108,8 @@ brew install --cask firefox
 brew install --cask beyond-compare
 brew install --cask postman
 brew install --cask sf-symbols
-#brew install --cask arduino 
+#brew install --cask arduino
+#brew install --cask flutter
 
 # install homebrew casks - utilities
 brew install --cask 1password
@@ -116,6 +120,8 @@ brew install --cask logitech-camera-settings
 brew install --cask vlc
 brew install --cask webex
 brew install --cask zoom
+brew install --cask slack
+brew install --cask soundsource
 #brew install --cask synergy
 
 # create symbolic links for iCloud folders
