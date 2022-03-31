@@ -15,6 +15,7 @@ echo 'HISTSIZE=99999'                                  >> ~/.zshrc
 echo 'HISTFILESIZE=999999'                             >> ~/.zshrc
 echo 'SAVEHIST=$HISTSIZE'                              >> ~/.zshrc
 echo 'alias history="history 1"'                       >> ~/.zshrc
+echo ''                                                >> ~/.zshrc
 
 # az cli completion
 echo '# az cli completion'                             >> ~/.zshrc
@@ -23,10 +24,12 @@ echo 'autoload -Uz bashcompinit'                       >> ~/.zshrc
 echo 'compinit'                                        >> ~/.zshrc
 echo 'bashcompinit'                                    >> ~/.zshrc
 echo 'source /opt/homebrew/etc/bash_completion.d/az'   >> ~/.zshrc
+echo ''                                                >> ~/.zshrc
 
 # enable alt-left & alt-right to go back and forth a word at a time
-echo 'bindkey "^[b" backward-word' >> ~/.zshrc
-echo 'bindkey "^[f" forward-word'  >> ~/.zshrc
+echo 'bindkey "^[b" backward-word'                     >> ~/.zshrc
+echo 'bindkey "^[f" forward-word'                      >> ~/.zshrc
+echo ''                                                >> ~/.zshrc
 
 # set hostname
 echo "Setting hostname"
