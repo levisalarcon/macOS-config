@@ -1,9 +1,9 @@
 #!/bin/zsh
 echo "MacOS Configuration & Application Installation"
+echo "Please enter administrator password:"
 echo
 
 # ask for the administrator password upfront.
-echo "Please enter administrator password:"
 sudo -v
 
 # keep-alive: update existing `sudo` time stamp until the script has finished.
@@ -56,6 +56,9 @@ echo
 # install wget
 brew instal wget
 
+# install svn
+brew install svn
+
 # brew install and configure git
 brew install git
 git config --global user.name "Gareth Jones"
@@ -91,6 +94,7 @@ mas install 497799835       #Xcode                 (13.2.1)
 # add homebrew cask taps
 brew tap homebrew/cask-versions
 brew tap homebrew/cask-drivers
+brew tap homebrew/cask-fonts
 
 # install homebrew casks - microsoft applications
 brew install --cask intune-company-portal
