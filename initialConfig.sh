@@ -10,10 +10,17 @@ sudo -v
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 # fix zsh history
-echo 'HISTSIZE=99999'              >> ~/.zshrc
-echo 'HISTFILESIZE=999999'         >> ~/.zshrc
-echo 'SAVEHIST=$HISTSIZE'          >> ~/.zshrc
-echo 'alias history="history 1"'   >> ~/.zshrc
+echo 'HISTSIZE=99999'                                  >> ~/.zshrc
+echo 'HISTFILESIZE=999999'                             >> ~/.zshrc
+echo 'SAVEHIST=$HISTSIZE'                              >> ~/.zshrc
+echo 'alias history="history 1"'                       >> ~/.zshrc
+
+# az cli completion
+echo 'autoload -Uz compinit'                           >> ~/.zshrc
+echo 'autoload -Uz bashcompinit'                       >> ~/.zshrc
+echo 'compinit'                                        >> ~/.zshrc
+echo 'bashcompinit'                                    >> ~/.zshrc
+echo 'source /opt/homebrew/etc/bash_completion.d/az'   >> ~/.zshrc
 
 # enable alt-left & alt-right to go back and forth a word at a time
 echo 'bindkey "^[b" backward-word' >> ~/.zshrc
