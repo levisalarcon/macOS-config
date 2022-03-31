@@ -143,13 +143,7 @@ echo 'autoload -Uz bashcompinit'                       >> ~/.zshrc
 echo 'compinit'                                        >> ~/.zshrc
 echo 'bashcompinit'                                    >> ~/.zshrc
 echo 'source /opt/homebrew/etc/bash_completion.d/az'   >> ~/.zshrc
-echo ''                                                >> ~/.zshrc
-
-# enable alt-left & alt-right to go back and forth a word at a time
-echo '# enable alt-left & alt-right word jump'         >> ~/.zshrc
-echo 'bindkey "^[b" backward-word'                     >> ~/.zshrc
-echo 'bindkey "^[f" forward-word'                      >> ~/.zshrc
-echo ''                                                >> ~/.zshrc
+echo ''                                                >> ~/.zshrcset
 
 # create symbolic links for iCloud folders
 echo "Creating symbolic links for iCloud"
