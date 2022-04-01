@@ -41,6 +41,9 @@ brew instal wget
 # install svn
 brew install svn
 
+# install tldr
+brew install tldr
+
 # brew install and configure git
 brew install git
 git config --global user.name "Gareth Jones"
@@ -93,6 +96,7 @@ brew install webex
 brew install zoom
 brew install slack
 brew install soundsource
+brew install rectangle
 #brew install synergy
 
 # install mac app store command-line interface
