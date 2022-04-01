@@ -26,9 +26,12 @@ echo
 # fix homebrew paths on M1
 # need to perform check for Apple silicon
 echo "Fix Homebrew paths on Apple Silicon"
-echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/garjones/.zprofile\n
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile\n
 eval "$(/opt/homebrew/bin/brew shellenv)"\n
 echo
+
+# enable brew auto completion
+echo 'FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"' >> ~/.zprofile\n
 
 # add homebrew cask taps
 brew tap homebrew/cask-versions
