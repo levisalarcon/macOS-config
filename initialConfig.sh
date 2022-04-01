@@ -113,7 +113,7 @@ mas install 497799835       #Xcode                 (13.2.1)
 
 # install powerline fonts
 brew install font-hack-nerd-font
-# use font menlo for powerline
+# use font Menlo Regular for Powerline 12
 
 # install powerlevel10k
 brew install romkatv/powerlevel10k/powerlevel10k
