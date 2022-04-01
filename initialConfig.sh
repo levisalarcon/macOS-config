@@ -127,18 +127,20 @@ brew install zsh-syntax-highlighting
 brew install zsh-history-substring-search
 
 # configure oh-me-zsh to use powerlevel10k theme and plugins
-echo "source $(brew --prefix)/opt/powerlevel10k/powerlevel10k.zsh-theme"                            >>~/.zshrc
-echo "source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"            >>~/.zshrc
-echo "source $(brew --prefix)/share/zsh-history-substring-search/zsh-history-substring-search.zsh"  >>~/.zshrc
+echo '# omz theme and plugins'                                                                      >> ~/.zshrc
+echo 'source $(brew --prefix)/opt/powerlevel10k/powerlevel10k.zsh-theme'                            >> ~/.zshrc
+echo 'source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh'            >> ~/.zshrc
+echo 'source $(brew --prefix)/share/zsh-history-substring-search/zsh-history-substring-search.zsh'  >> ~/.zshrc
+echo ''                                                                                             >> ~/.zshrc
 
 # add support for az cli command line completion
-echo '# az cli completion'                             >> ~/.zshrc
-echo 'autoload -Uz compinit'                           >> ~/.zshrc
-echo 'autoload -Uz bashcompinit'                       >> ~/.zshrc
-echo 'compinit'                                        >> ~/.zshrc
-echo 'bashcompinit'                                    >> ~/.zshrc
-echo 'source /opt/homebrew/etc/bash_completion.d/az'   >> ~/.zshrc
-echo ''                                                >> ~/.zshrcset
+echo '# az cli completion'                                                                          >> ~/.zshrc
+echo 'autoload -Uz compinit'                                                                        >> ~/.zshrc
+echo 'autoload -Uz bashcompinit'                                                                    >> ~/.zshrc
+echo 'compinit'                                                                                     >> ~/.zshrc
+echo 'bashcompinit'                                                                                 >> ~/.zshrc
+echo 'source /opt/homebrew/etc/bash_completion.d/az'                                                >> ~/.zshrc
+echo ''                                                                                             >> ~/.zshrc
 
 # create symbolic links for iCloud folders
 echo "Creating symbolic links for iCloud"
