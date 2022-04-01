@@ -131,15 +131,7 @@ sed -i.bak "s/ZSH_THEME=\"robbyrussell\"/#ZSH_THEME=\"robbyrussell\"/" .zshrc
 # configure oh-me-zsh to use powerlevel10k
 echo "source $(brew --prefix)/opt/powerlevel10k/powerlevel10k.zsh-theme" >>~/.zshrc
 
-# fix zsh history
-echo '# fix zsh history'                               >> ~/.zshrc
-echo 'HISTSIZE=99999'                                  >> ~/.zshrc
-echo 'HISTFILESIZE=999999'                             >> ~/.zshrc
-echo 'SAVEHIST=$HISTSIZE'                              >> ~/.zshrc
-echo 'alias history="history 1"'                       >> ~/.zshrc
-echo ''                                                >> ~/.zshrc
-
-# az cli completion
+# add support for az cli command line completion
 echo '# az cli completion'                             >> ~/.zshrc
 echo 'autoload -Uz compinit'                           >> ~/.zshrc
 echo 'autoload -Uz bashcompinit'                       >> ~/.zshrc
