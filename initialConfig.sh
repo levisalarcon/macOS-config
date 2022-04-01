@@ -111,25 +111,25 @@ mas install 1274495053      #Microsoft To Do       (2.59)
 mas install 409203825       #Numbers               (11.2)
 mas install 497799835       #Xcode                 (13.2.1)
 
-# install powerline fonts
-brew install font-hack-nerd-font
-# use font Menlo Regular for Powerline 12
-
-# install powerlevel10k
-brew install romkatv/powerlevel10k/powerlevel10k
-
-# install omz plugins
-brew install zsh-syntax-highlighting
-brew install zsh-history-substring-search
-
 # install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # comment out ZSH_THEME
 sed -i.bak "s/ZSH_THEME=\"robbyrussell\"/#ZSH_THEME=\"robbyrussell\"/" .zshrc
 
-# configure oh-me-zsh to use powerlevel10k
-echo "source $(brew --prefix)/opt/powerlevel10k/powerlevel10k.zsh-theme" >>~/.zshrc
+# install powerline fonts
+brew install $( brew search powerline | grep font | tr '\n' ' ' )
+# use font Menlo Regular for Powerline 12
+
+# install powerlevel10k theme and omz plugins 
+brew install romkatv/powerlevel10k/powerlevel10k
+brew install zsh-syntax-highlighting
+brew install zsh-history-substring-search
+
+# configure oh-me-zsh to use powerlevel10k theme and plugins
+echo "source $(brew --prefix)/opt/powerlevel10k/powerlevel10k.zsh-theme"                            >>~/.zshrc
+echo "source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"            >>~/.zshrc
+echo "source $(brew --prefix)/share/zsh-history-substring-search/zsh-history-substring-search.zsh"  >>~/.zshrc
 
 # add support for az cli command line completion
 echo '# az cli completion'                             >> ~/.zshrc
