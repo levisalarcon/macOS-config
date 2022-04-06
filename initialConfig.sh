@@ -196,21 +196,12 @@ killall Finder
 echo
 
 # set terminal preferences
+defaults write com.apple.terminal "Default Window Settings" "GJPro"
+defaults write com.apple.terminal "Startup Window Settings" "GJPro"
 wget https://raw.githubusercontent.com/garjones/macOS-config/main/GJPro.terminal
 open GJPro.terminal
 rm GJPro.terminal
-defaults write com.apple.terminal "Default Window Settings" "GJPro"
-defaults write com.apple.terminal "Startup Window Settings" "GJPro"
 
-# this is interesting but Fint does not work
-# /usr/libexec/PlistBuddy -c "set 'Default Window Settings' 'Pro'"               ~/Library/Preferences/com.apple.Terminal.plist
-# /usr/libexec/PlistBuddy -c "set 'Startup Window Settings' 'Pro'"               ~/Library/Preferences/com.apple.Terminal.plist
-# /usr/libexec/PlistBuddy -c "add 'Window Settings':Pro:columnCount integer 180" ~/Library/Preferences/com.apple.Terminal.plist
-# /usr/libexec/PlistBuddy -c "add 'Window Settings':Pro:rowCount integer 80"     ~/Library/Preferences/com.apple.Terminal.plist
-# /usr/libexec/PlistBuddy -c "print 'Window Settings':Pro:columnCount"           ~/Library/Preferences/com.apple.Terminal.plist
-# /usr/libexec/PlistBuddy -c "print 'Window Settings':Pro:rowCount"              ~/Library/Preferences/com.apple.Terminal.plist
-# /usr/libexec/PlistBuddy -c "set 'Window Settings':Pro:Font <62706C6973743030D4010203040506070A582476657273696F6E592461726368697665725424746F7058246F626A6563747312000186A05F100F4E534B657965644172636869766572D1080954726F6F748001A40B0C151655246E756C6CD40D0E0F1011121314564E5353697A65584E5366466C616773564E534E616D655624636C6173732340240000000000001010800280035F10194D656E6C6F466F72506F7765726C696E652D526567756C6172D21718191A5A24636C6173736E616D655824636C6173736573564E53466F6E74A2191B584E534F626A65637408111A24293237494C5153585E676E777E858E909294B0B5C0C9D0D30000000000000101000000000000001C000000000000000000000000000000DC>" ~/Library/Preferences/com.apple.Terminal.plist
- 
 # kill the terminal otherwise it will overwrite changes
 read -p "Installation complete. About to kill the terminal ... "
 killall Terminal
