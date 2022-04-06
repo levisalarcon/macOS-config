@@ -202,10 +202,7 @@ echo
 /usr/libexec/PlistBuddy -c "add 'Window Settings':Pro:rowCount integer 80"     ~/Library/Preferences/com.apple.Terminal.plist
 /usr/libexec/PlistBuddy -c "print 'Window Settings':Pro:columnCount"           ~/Library/Preferences/com.apple.Terminal.plist
 /usr/libexec/PlistBuddy -c "print 'Window Settings':Pro:rowCount"              ~/Library/Preferences/com.apple.Terminal.plist
-
-# OR # 
-rm -rf $HOME/Library/Preferences/com.apple.Terminal.plist
-wget https://raw.githubusercontent.com/garjones/macOS-config/main/com.apple.Terminal.plist  --directory-prefix=$HOME/Library/Preferences
+# need to work out how to set font to "Menlo Regular for Powerline 10"
 
 # kill the terminal otherwise it will overwrite changes
 read -p "Installation complete. About to kill the terminal ... "
