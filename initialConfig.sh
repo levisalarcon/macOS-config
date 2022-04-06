@@ -200,12 +200,10 @@ wget https://raw.githubusercontent.com/garjones/macOS-config/main/GJPro.terminal
 open GJPro.terminal
 rm GJPro.terminal
 
-# make it the default
+# set the defaults and kill the terminal otherwise it will overwrite changes
+read -p "Installation complete. About to kill the terminal ... "
 defaults write com.apple.terminal "Default Window Settings" "GJPro"
 defaults write com.apple.terminal "Startup Window Settings" "GJPro"
-
-# kill the terminal otherwise it will overwrite changes
-read -p "Installation complete. About to kill the terminal ... "
 killall Terminal
 
 # download command line utils
