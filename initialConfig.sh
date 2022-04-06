@@ -196,10 +196,12 @@ killall Finder
 echo
 
 # set terminal preferences
-/usr/libexec/PlistBuddy -c "set   'Window Settings':Pro:columnCount 150" ~/Library/Preferences/com.apple.Terminal.plist
-/usr/libexec/PlistBuddy -c "set   'Window Settings':Pro:rowCount 50"     ~/Library/Preferences/com.apple.Terminal.plist
-/usr/libexec/PlistBuddy -c "print 'Window Settings':Pro:columnCount"     ~/Library/Preferences/com.apple.Terminal.plist
-/usr/libexec/PlistBuddy -c "print 'Window Settings':Pro:rowCount"        ~/Library/Preferences/com.apple.Terminal.plist
+/usr/libexec/PlistBuddy -c "set 'Default Window Settings' 'Pro'"               ~/Library/Preferences/com.apple.Terminal.plist
+/usr/libexec/PlistBuddy -c "set 'Startup Window Settings' 'Pro'"               ~/Library/Preferences/com.apple.Terminal.plist
+/usr/libexec/PlistBuddy -c "add 'Window Settings':Pro:columnCount integer 180" ~/Library/Preferences/com.apple.Terminal.plist
+/usr/libexec/PlistBuddy -c "add 'Window Settings':Pro:rowCount integer 80"     ~/Library/Preferences/com.apple.Terminal.plist
+/usr/libexec/PlistBuddy -c "print 'Window Settings':Pro:columnCount"           ~/Library/Preferences/com.apple.Terminal.plist
+/usr/libexec/PlistBuddy -c "print 'Window Settings':Pro:rowCount"              ~/Library/Preferences/com.apple.Terminal.plist
 
 # OR # 
 rm -rf $HOME/Library/Preferences/com.apple.Terminal.plist
