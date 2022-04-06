@@ -196,7 +196,7 @@ killall Finder
 echo
 
 # set terminal preferences
-wget https://raw.githubusercontent.com/garjones/macOS-config/main/GJPro.terminal\n
+wget https://raw.githubusercontent.com/garjones/macOS-config/main/GJPro.terminal
 open GJPro.terminal
 rm GJPro.terminal
 defaults write com.apple.terminal "Default Window Settings" "GJPro"
