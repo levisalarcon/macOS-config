@@ -196,6 +196,12 @@ killall Finder
 echo
 
 # set terminal preferences
+/usr/libexec/PlistBuddy -c "set   'Window Settings':Pro:columnCount 150" ~/Library/Preferences/com.apple.Terminal.plist
+/usr/libexec/PlistBuddy -c "set   'Window Settings':Pro:rowCount 50"     ~/Library/Preferences/com.apple.Terminal.plist
+/usr/libexec/PlistBuddy -c "print 'Window Settings':Pro:columnCount"     ~/Library/Preferences/com.apple.Terminal.plist
+/usr/libexec/PlistBuddy -c "print 'Window Settings':Pro:rowCount"        ~/Library/Preferences/com.apple.Terminal.plist
+
+# OR # 
 rm -rf $HOME/Library/Preferences/com.apple.Terminal.plist
 wget https://raw.githubusercontent.com/garjones/macOS-config/main/com.apple.Terminal.plist  --directory-prefix=$HOME/Library/Preferences
 
