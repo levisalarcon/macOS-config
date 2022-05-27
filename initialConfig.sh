@@ -90,6 +90,8 @@ brew install postman
 brew install sf-symbols
 #brew install arduino
 #brew install flutter
+#manycam?
+
 
 # install homebrew casks - utilities
 brew install 1password
