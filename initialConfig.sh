@@ -18,6 +18,9 @@ sudo scutil --set LocalHostName $myname
 hostname -f
 echo
 
+# Install rosetta
+sudo softwareupdate --install-rosetta
+
 # install hombrew
 echo "Installing Homebrew"
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -64,7 +67,7 @@ brew install 1kc-razer
 brew install azure-cli
 
 # install homebrew casks - microsoft applications
-brew install intune-company-portal
+#brew install intune-company-portal
 brew install microsoft-edge
 brew install microsoft-office
 brew install microsoft-teams
