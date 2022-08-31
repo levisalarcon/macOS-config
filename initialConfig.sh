@@ -123,15 +123,18 @@ mas install 1274495053      #Microsoft To Do       (2.59)
 mas install 409203825       #Numbers               (11.2)
 mas install 497799835       #Xcode                 (13.2.1)
 
+# install fonts
+brew install font-source-sans-pro
+brew install font-montserrat
+brew install $( brew search noto | grep font | tr '\n' ' ' )
+brew install $( brew search powerline | grep font | tr '\n' ' ' )
+# use font Menlo Regular for Powerline 12
+
 # install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # comment out ZSH_THEME
 sed -i.bak "s/ZSH_THEME=\"robbyrussell\"/#ZSH_THEME=\"robbyrussell\"/" .zshrc
-
-# install powerline fonts
-brew install $( brew search powerline | grep font | tr '\n' ' ' )
-# use font Menlo Regular for Powerline 12
 
 # install powerlevel10k theme and omz plugins 
 brew install romkatv/powerlevel10k/powerlevel10k
